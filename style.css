@@ -1,0 +1,455 @@
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('./assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+body {
+  background-color: #0B0B0F;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  max-width: 1840px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 61px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__mail {
+  padding: 0 15px 0 0;
+  margin-bottom: 5px;
+}
+
+.header__mail a {
+  font-family: 'ClashDisplay-Regular', sans-serif;
+  font-size: 23px;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__inner {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  margin-top: -7px;
+}
+
+.main__inner h1 {
+  font-family: 'ClashDisplay-Regular', sans-serif;
+  color: white;
+  font-size: 120px;
+  line-height: 156px;
+  font-weight: 400;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+.main__inner p {
+  color: #898CA9;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  max-width: 774px;
+  margin: 0 auto;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, .08);
+  padding: 4px 25px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.tag p {
+  color: white;
+  font-size: 16px;
+}
+
+.main .future {
+  position: absolute;
+  z-index: 6;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.future p {
+  font-family: 'ClashDisplay-Regular', sans-serif;
+  font-size: 23px;
+  line-height: 30px;
+  
+  color: white;
+  font-weight: 400;
+}
+
+.bg-orange {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bg-orange img {
+  height: 100%;
+}
+
+.bg-purple {
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bg-purple-mobile, .bg-orange-mobile {
+  display: none;
+}
+
+.bg-purple img {
+  height: 100%;
+}
+
+.bg-circles {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bg-circles-mobile {
+  display: none;
+}
+
+.bg-circles svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sphere {
+  position: absolute;
+  z-index: 4;
+  bottom: 174px;
+  right: 0;
+}
+
+.star-one {
+  position: absolute;
+  z-index: 4;
+  top: 8.8%;
+  left: 24.8%;
+}
+
+.star-two {
+  position: absolute;
+  z-index: 4;
+  top: 30.2%;
+  right: 33.6%;
+}
+
+.star-three {
+  position: absolute;
+  z-index: 4;
+  bottom: 25.9%;
+  left: 21.9%;
+}
+
+.coin-1 {
+  position: absolute;
+  z-index: 11;
+  left: 5.6%;
+  top: -120px;
+}
+
+.coin-2 {
+  position: absolute;
+  z-index: 11;
+  right: 10.3%;
+  top: -310px;
+}
+
+.coin-3 {
+  position: absolute;
+  z-index: 11;
+  right: 16.2%;
+  bottom: -175px;
+}
+
+.coin-4 {
+  position: absolute;
+  z-index: 11;
+  left: 43.8%;
+  bottom: -315px;
+}
+
+@media screen and (max-height: 1040px) {
+  .coin-4 {
+    bottom: -260px;
+  }
+}
+
+@media screen and (max-height: 922px) {
+  .coin-4 {
+    bottom: -200px;
+  }
+}
+
+
+
+@media screen and (max-width: 1600px) {
+  .coin-1 {
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .coin-1 {
+    left: -100px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .main__inner h1 {
+    font-size: 100px;
+  }
+  .main__inner p {
+    font-size: 18px;
+  }
+  .tag p {
+    font-size: 16px;
+  }
+
+  .star-two {
+    top: 20.2%;
+  }
+
+  .coin-2 {
+    top: -210px;
+  }
+
+  .coin-2 img {
+    width: 180px;
+  }
+
+  .coin-1 img {
+    width: 290px;
+  }
+
+  .sphere img {
+    width: 120px;
+  }
+}
+
+@media (max-height: 780px) and (max-width: 1366px){
+  .coin-2 {
+    top: -160px;
+  }
+} 
+
+@media screen and (max-width: 1264px) {
+  .star-three {
+    bottom: 30.9%;
+    left: 10%;
+  }
+  .main .future {
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .main__inner h1 {
+    font-size: 70px;
+    line-height: 86px;
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .star-two {
+    right: 25%; 
+  }
+  .coin-4 {
+    bottom: -140px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .sphere {
+    bottom: 30px;
+  }
+  .star-three {
+    bottom: 25%;
+  }
+  .coin-2 {
+    right: 0px;
+    top: -130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .coin-2, 
+  .coin-4, 
+  .sphere, 
+  .star-one, 
+  .star-three, 
+  .header__mail {
+    display: none;
+  }
+
+  .header .container {
+    justify-content: center;
+  }
+
+  .bg-circles-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .bg-circles-mobile svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg-circles {
+    display: none;
+  }
+
+  .coin-1 {
+    top: -134px;
+    left: -117px;
+  } 
+
+  .coin-1 img {
+    width: 240px;
+  }
+
+  .coin-3 {
+    bottom: -179px;
+    right: -70px;
+  }
+
+  
+  .star-two {
+    top: unset;
+    bottom: 115px;
+    right: unset;
+    left: 115px;
+  }
+
+  .main__inner {
+    margin-top: -37px;
+  }
+
+  .main__inner h1 {
+    margin-top: 17px;
+  }
+
+  .main__inner > p {
+    line-height: 27px;
+  }
+
+  .main .future {
+    left: unset;
+    transform: unset;
+    display: block;
+    width: calc(100% - 32px);
+    text-align: center;
+    bottom: 42px;
+  }
+
+  
+}
+
+@media screen and (max-width: 500px) {
+  .bg-orange {
+    display: none;
+  }
+  
+  .bg-purple {
+    display: none;
+  }
+
+  .bg-orange-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .bg-purple-mobile {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .bg-purple-mobile img, .bg-orange-mobile img {
+    display: block;
+    width: 100%;
+  }
+
+}
